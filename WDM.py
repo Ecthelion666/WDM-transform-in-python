@@ -44,7 +44,7 @@ def Cmn(m,n):
     if (n+m)%2==0:
         return 1
     else:
-        return i
+        return 0+1j
 
 #construct phitilde and transform to time domain
 phif=[]
@@ -84,12 +84,10 @@ X=X.T
 x=np.linspace(0,hp.duration,lenx)
 y=np.linspace(0,OM/(2*math.pi),leny)
 plt.figure()
-norm=matplotlib.colors.LogNorm(vmin=10**(-19))
+norm=matplotlib.colors.LogNorm()
 plt.pcolormesh(x,y,X,norm=norm)
 plt.xlabel('time(s)')
 plt.ylabel('freq(Hz)')
 plt.colorbar()
 plt.show()
-
-
 
