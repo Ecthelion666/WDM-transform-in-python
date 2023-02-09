@@ -84,10 +84,9 @@ X=X.T
 x=np.linspace(0,hp.duration,lenx)
 y=np.linspace(0,OM/(2*math.pi),leny)
 plt.figure()
-norm=matplotlib.colors.LogNorm()
+norm=matplotlib.colors.LogNorm(vmin=10**(-22))
 plt.pcolormesh(x,y,X,norm=norm)
 plt.xlabel('time(s)')
 plt.ylabel('freq(Hz)')
 plt.colorbar()
 plt.show()
-
